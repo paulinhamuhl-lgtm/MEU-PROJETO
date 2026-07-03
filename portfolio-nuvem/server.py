@@ -1086,17 +1086,17 @@ Dê sua opinião sobre o fundo em 3-4 frases diretas e honestas, mencionando esp
 # ── Handler HTTP ──────────────────────────────────────────────────────
 class Handler(BaseHTTPRequestHandler):
 
+    def get_expected_token(self):
+        import hashlib, os
+        user = os.environ.get('APP_USER', 'admin')
+        pwd = os.environ.get('APP_PASS', '123')
+        return hashlib.sha256((user + pwd + 'muhlmann_salt_2026').encode()).hexdigest()
+
     def check_auth(self):
-        # Usuário: admin / Senha: 123
-        # Em base64: YWRtaW46MTIz
-        auth_header = self.headers.get('Authorization')
-        if auth_header == 'Basic YWRtaW46MTIz':
+        cookie = self.headers.get('Cookie', '')
+        token = self.get_expected_token()
+        if f'session_id={token}' in cookie:
             return True
-        self.send_response(401)
-        self.send_header('WWW-Authenticate', 'Basic realm="Portfolio Privado"')
-        self.send_header('Content-type', 'text/html')
-        self.end_headers()
-        self.wfile.write(b'Acesso Restrito. Informe usuario e senha.')
         return False
 
     def send_json(self, data, status=200):
@@ -1132,9 +1132,44 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_POST(self):
-        if not self.check_auth(): return
         parsed = urllib.parse.urlparse(self.path)
         path   = parsed.path
+
+        if path == '/api/login':
+            try:
+                length = int(self.headers.get('Content-Length', 0))
+                import json
+                body = json.loads(self.rfile.read(length)) if length else {}
+                user = body.get('username', '')
+                pwd = body.get('password', '')
+                remember = body.get('remember', False)
+                
+                import os
+                if user == os.environ.get('APP_USER', 'admin') and pwd == os.environ.get('APP_PASS', '123'):
+                    token = self.get_expected_token()
+                    self.send_response(200)
+                    self.send_header('Content-type', 'application/json')
+                    cookie_val = f"session_id={token}; HttpOnly; Path=/"
+                    if remember:
+                        cookie_val += "; Max-Age=31536000"
+                    self.send_header('Set-Cookie', cookie_val)
+                    self.end_headers()
+                    self.wfile.write(b'{"success":true}')
+                else:
+                    self.send_response(401)
+                    self.send_header('Content-type', 'application/json')
+                    self.end_headers()
+                    self.wfile.write(b'{"error":"Invalid credentials"}')
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+            return
+
+        if not self.check_auth():
+            self.send_response(401)
+            self.end_headers()
+            return
+
 
         # ── POST /api/analise-fii ──────────────────────────────────────
         if path == '/api/analise-fii':
@@ -1350,10 +1385,22 @@ class Handler(BaseHTTPRequestHandler):
         self.send_error(404)
 
     def do_GET(self):
-        if not self.check_auth(): return
         parsed = urllib.parse.urlparse(self.path)
         qs = urllib.parse.parse_qs(parsed.query)
         path = parsed.path
+        
+        if path == '/login.html':
+            self.serve_file(os.path.join(DIR, 'login.html'), 'text/html; charset=utf-8')
+            return
+
+        if not self.check_auth():
+            if path in ('/', '/dashboard', '/dashboard.html'):
+                self.serve_file(os.path.join(DIR, 'login.html'), 'text/html; charset=utf-8')
+            else:
+                self.send_response(401)
+                self.end_headers()
+            return
+
 
         # ── Dashboard HTML ─────────────────────────────────────────────
         if path in ('/', '/dashboard', '/dashboard.html'):

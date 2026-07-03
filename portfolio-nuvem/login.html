@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhlmann Finance - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f111a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent: #6c5ce7;
+            --accent-hover: #5b4bc4;
+            --text-main: #f1f2f6;
+            --text-muted: #a4b0be;
+            --error: #ff4757;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: radial-gradient(circle at 15% 50%, rgba(108, 92, 231, 0.15), transparent 25%),
+                              radial-gradient(circle at 85% 30%, rgba(0, 210, 211, 0.1), transparent 25%);
+        }
+
+        .login-container {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .logo-area {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-area h1 {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+        
+        .logo-area p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: var(--text-main);
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: var(--accent);
+        }
+
+        .options-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .options-group input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+            accent-color: var(--accent);
+        }
+
+        .options-group label {
+            font-size: 13px;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.1s;
+        }
+
+        button:hover {
+            background: var(--accent-hover);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .error-message {
+            color: var(--error);
+            font-size: 13px;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="logo-area">
+            <h1>Muhlmann Finance</h1>
+            <p>Área Restrita</p>
+        </div>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" placeholder="Digite seu usuário" required autocomplete="username">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required autocomplete="current-password">
+            </div>
+
+            <div class="options-group">
+                <input type="checkbox" id="remember">
+                <label for="remember">Lembrar de mim neste dispositivo</label>
+            </div>
+
+            <button type="submit">Acessar Dashboard</button>
+            <div class="error-message" id="errorMsg">Usuário ou senha incorretos.</div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const remember = document.getElementById('remember').checked;
+            const errorMsg = document.getElementById('errorMsg');
+            const btn = e.target.querySelector('button');
+
+            errorMsg.style.display = 'none';
+            btn.textContent = 'Autenticando...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: user,
+                        password: pass,
+                        remember: remember
+                    })
+                });
+
+                if (response.ok) {
+                    btn.textContent = 'Acesso liberado!';
+                    btn.style.background = '#2ed573';
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 500);
+                } else {
+                    errorMsg.style.display = 'block';
+                    btn.textContent = 'Acessar Dashboard';
+                    btn.disabled = false;
+                }
+            } catch (err) {
+                errorMsg.textContent = 'Erro de conexão com o servidor.';
+                errorMsg.style.display = 'block';
+                btn.textContent = 'Acessar Dashboard';
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
