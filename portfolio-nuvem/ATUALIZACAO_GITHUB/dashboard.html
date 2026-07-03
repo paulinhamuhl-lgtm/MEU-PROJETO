@@ -1,9 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
-<meta name="theme-color" content="#0a0e1a">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Portfolio Master — Painel de Investimentos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,11 +35,11 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t
 /* ── BOTTOM NAV (mobile) ── */
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:100;
   background:rgba(19,24,48,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-top:1px solid var(--border);display:flex;height:65px;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;} .bottom-nav::-webkit-scrollbar{display:none;}
-.nav-btn{flex:0 0 auto;min-width:85px;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:3px;color:var(--muted);font-size:.7rem;font-weight:600;
+  border-top:1px solid var(--border);display:flex;height:62px}
+.nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;color:var(--muted);font-size:.6rem;font-weight:600;
   background:none;border:none;cursor:pointer;transition:.2s;letter-spacing:.3px}
-.nav-btn svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .nav-btn.active{color:var(--accent)}
 .nav-btn.active svg{filter:drop-shadow(0 0 6px rgba(99,102,241,.5))}
 
@@ -98,7 +96,7 @@ body.privacy-mode .priv{filter:blur(6px);user-select:none;transition:filter .25s
 body.privacy-mode .priv:hover{filter:blur(0px)}
 .ticker-badge{display:inline-block;padding:2px 8px;border-radius:6px;font-weight:700;
   background:rgba(99,102,241,.12);color:var(--accent);font-size:.7rem}
-.corr-badge{display:inline-block;padding:2px 7px;border-radius:5px;font-size:.7rem;font-weight:700}
+.corr-badge{display:inline-block;padding:2px 7px;border-radius:5px;font-size:.6rem;font-weight:700}
 .corr-CLEAR{background:rgba(16,185,129,.15);color:var(--green)}
 .corr-RICO{background:rgba(99,102,241,.15);color:var(--accent)}
 .corr-GENIAL{background:rgba(251,146,60,.15);color:#fb923c}
@@ -192,7 +190,7 @@ body.privacy-mode .priv:hover{filter:blur(0px)}
 .usd-ref{display:block;font-size:.52rem;color:var(--accent);margin-top:1px;white-space:nowrap;font-weight:500}
 table td{vertical-align:top}
 .refresh-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:8px;
-  border:1px solid var(--border);background:var(--card2);color:var(--accent);font-size:.7rem;
+  border:1px solid var(--border);background:var(--card2);color:var(--accent);font-size:.6rem;
   font-weight:700;cursor:pointer;transition:.3s;font-family:inherit;margin-left:8px}
 .refresh-btn:hover{background:rgba(99,102,241,.15);border-color:var(--accent)}
 .refresh-btn.loading{opacity:.6;pointer-events:none}
@@ -359,7 +357,7 @@ table td{vertical-align:top}
 .compra-summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
 .compra-sum-box{background:rgba(0,0,0,.2);border-radius:8px;padding:8px 10px;
   text-align:center}
-.compra-sum-label{font-size:.7rem;color:#94a3b8;font-weight:600;
+.compra-sum-label{font-size:.6rem;color:#94a3b8;font-weight:600;
   text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px}
 .compra-sum-value{font-size:.9rem;font-weight:800;color:var(--text)}
 .compra-sum-value.green{color:#22c55e}
@@ -593,7 +591,7 @@ table td{vertical-align:top}
   color:#a5b4fc;
   border-radius:20px;
   padding:1px 8px;
-  font-size:.7rem;
+  font-size:.6rem;
   font-weight:700;
   letter-spacing:.03em;
   white-space:nowrap;
@@ -662,7 +660,7 @@ table td{vertical-align:top}
 .brk-asset-tbl{width:100%;border-collapse:collapse}
 .brk-asset-tbl th{
   color:var(--muted);
-  font-size:.7rem;
+  font-size:.6rem;
   font-weight:700;
   letter-spacing:.05em;
   padding:7px 10px;
@@ -699,7 +697,7 @@ table td{vertical-align:top}
   border-top:1px solid rgba(255,255,255,.07);
 }
 .brk-footer-item  {display:flex;flex-direction:column;align-items:flex-end;gap:2px}
-.brk-footer-label {color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.brk-footer-label {color:var(--muted);font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
 .brk-footer-value {font-weight:800;font-size:.8rem;font-variant-numeric:tabular-nums}
 </style>
 </head>
@@ -2218,7 +2216,7 @@ function openExtratoAportesModal(mes) {
               '<td>' + badge + '</td></tr>';
     });
     const totDisp = tot >= 0 ? fmt(tot) : '−' + fmt(Math.abs(tot));
-    const countInfo = nVendas > 0 ? ' <span style="font-size:.7rem;color:var(--muted);font-weight:400">(' + nCompras + ' compras, ' + nVendas + ' vendas)</span>' : '';
+    const countInfo = nVendas > 0 ? ' <span style="font-size:.6rem;color:var(--muted);font-weight:400">(' + nCompras + ' compras, ' + nVendas + ' vendas)</span>' : '';
     return '<div class="ext-sec">' +
       '<div class="ext-sec-hdr">' +
         '<span class="ext-corr-badge ' + corrKey + '">' + corrLabel + '</span>' +
@@ -3362,7 +3360,7 @@ async function abrirStatusPrecos() {
     }
 
     // Nota explicativa
-    html += `<div style="margin-top:14px;font-size:.7rem;color:var(--muted);line-height:1.5;
+    html += `<div style="margin-top:14px;font-size:.6rem;color:var(--muted);line-height:1.5;
                          border-top:1px solid rgba(255,255,255,.06);padding-top:10px">
       <strong>Como interpretar:</strong> o timestamp "do Yahoo Finance" é quando o Yahoo registrou 
       a última negociação daquele ativo. Durante o pregão, esse valor se atualiza a cada busca (cache de 60s). 
@@ -4174,8 +4172,8 @@ function renderOportunidades() {
     else                      { badge = '🟢 Acima da Média';   badgeClass = 'badge-acima-media'; }
     const dMedClass = d.dVsMedio >= 0 ? 'green' : 'red';
     const dMinClass = d.dVsMin   >= 0 ? 'green' : 'red';
-    const clLabel   = d.cl === 'ACOES' ? '<span style="font-size:.7rem;color:var(--muted)">[Ação]</span>' :
-                      d.cl === 'REITS' ? '<span style="font-size:.7rem;color:var(--muted)">[REIT]</span>' : '';
+    const clLabel   = d.cl === 'ACOES' ? '<span style="font-size:.6rem;color:var(--muted)">[Ação]</span>' :
+                      d.cl === 'REITS' ? '<span style="font-size:.6rem;color:var(--muted)">[REIT]</span>' : '';
     return `<tr>
       <td><strong>${d.t}</strong> ${clLabel}</td>
       <td>R$ ${d.pmMin.toFixed(2)}</td>
@@ -4686,7 +4684,7 @@ function simRenderPicker() {
         <div style="flex:1;min-width:80px">
           <div style="font-size:.62rem;color:var(--muted)">📊 DY méd./cota</div>
           <div style="font-size:.85rem;font-weight:700;color:var(--green)">${dyMensStr}</div>
-          <div style="font-size:.7rem;color:#818cf8">${dyAnualStr}</div>
+          <div style="font-size:.6rem;color:#818cf8">${dyAnualStr}</div>
         </div>
 
         <!-- Mini barra + meses -->
@@ -4731,12 +4729,12 @@ function simRenderPicker() {
       <div style="display:flex;align-items:center;gap:16px;margin-top:8px;padding:7px 10px;
                   background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);flex-wrap:wrap">
         <div style="display:flex;align-items:center;gap:6px">
-          <span style="font-size:.7rem;color:var(--muted)">💼 Total investido</span>
+          <span style="font-size:.6rem;color:var(--muted)">💼 Total investido</span>
           <span style="font-size:.78rem;font-weight:700;color:var(--text)">R$ ${totalFmt}</span>
         </div>
         <div style="width:1px;height:14px;background:rgba(255,255,255,.1)"></div>
         <div style="display:flex;align-items:center;gap:6px">
-          <span style="font-size:.7rem;color:var(--muted)">📊 % da carteira</span>
+          <span style="font-size:.6rem;color:var(--muted)">📊 % da carteira</span>
           <span style="font-size:.78rem;font-weight:700;color:${pctCart>=10?'#fb923c':pctCart>=5?'#fbbf24':'#94a3b8'}">${pctFmt}%</span>
           <div style="width:60px;height:5px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden">
             <div style="height:100%;width:${Math.min(100,pctCart*5)}%;background:${pctCart>=10?'#fb923c':pctCart>=5?'#fbbf24':'#6366f1'};border-radius:3px;transition:width .5s"></div>
@@ -4823,7 +4821,7 @@ async function renderAnaliseIA(painel, data) {
         <div class="ia-veredicto ${vcls}">${vicon}</div>
       </div>
       <div style="text-align:right">
-        <div style="font-size:.7rem;color:var(--muted)">Analisado em</div>
+        <div style="font-size:.6rem;color:var(--muted)">Analisado em</div>
         <div style="font-size:.65rem;font-weight:600;color:var(--text)">${data.analisadoEm}</div>
       </div>
     </div>
@@ -5158,9 +5156,9 @@ function simRenderResumo() {
   if (insightEl) {
     const vsSelicDiff = yieldAaEst - SELIC;
     const msg = vsSelicDiff >= 2
-      ? `✅ Cesta com yield estimado de <strong style="color:#22c55e">${yieldAaEst.toFixed(2)}% a.a.</strong> — <strong>${vsSelicDiff.toFixed(1)}pp acima da Selic</strong>. Score médio ponderado: <span class="score-badge ${scoreMedCls}" style="width:24px;height:24px;font-size:.58rem">${scoreMedGrade}</span>`
+      ? `✅ Cesta com yield estimado de <strong style="color:#22c55e">${yieldAaEst.toFixed(2)}% a.a.</strong> — <strong>${vsSelicDiff.toFixed(1)}pp acima da Selic</strong>. Score médio ponderado: <span class="score-badge ${scoreMedCls}" style="width:20px;height:20px;font-size:.58rem">${scoreMedGrade}</span>`
       : vsSelicDiff >= 0
-      ? `📊 Yield estimado de <strong style="color:#fbbf24">${yieldAaEst.toFixed(2)}% a.a.</strong> — levemente acima da Selic (${SELIC}%). Score médio: <span class="score-badge ${scoreMedCls}" style="width:24px;height:24px;font-size:.58rem">${scoreMedGrade}</span>`
+      ? `📊 Yield estimado de <strong style="color:#fbbf24">${yieldAaEst.toFixed(2)}% a.a.</strong> — levemente acima da Selic (${SELIC}%). Score médio: <span class="score-badge ${scoreMedCls}" style="width:20px;height:20px;font-size:.58rem">${scoreMedGrade}</span>`
       : `⚠️ Yield estimado de <strong style="color:#f87171">${yieldAaEst.toFixed(2)}% a.a.</strong> — abaixo da Selic (${SELIC}%). Reavalie a composição da cesta.`;
     insightEl.innerHTML = msg;
   }
