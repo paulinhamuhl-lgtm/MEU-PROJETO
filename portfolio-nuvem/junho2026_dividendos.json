@@ -1,0 +1,163 @@
+{
+  "cl": 2041.17,
+  "ri": 919.96,
+  "ge": 1659.0,
+  "detalhes": {
+    "ARRI11": {
+      "dy": 0.07,
+      "dataPag": "2026-06-08"
+    },
+    "BRCR11": {
+      "dy": 0.41,
+      "dataPag": "2026-06-15"
+    },
+    "CNES11": {
+      "dy": 0.007438849,
+      "dataPag": "2026-06-29"
+    },
+    "CPTS11": {
+      "dy": 0.09,
+      "dataPag": "2026-06-22"
+    },
+    "HGBS11": {
+      "dy": 0.17,
+      "dataPag": "2026-06-15"
+    },
+    "IRIM11": {
+      "dy": 0.95,
+      "dataPag": "2026-06-17"
+    },
+    "KNRI11": {
+      "dy": 1.1,
+      "dataPag": "2026-06-15"
+    },
+    "KNSC11": {
+      "dy": 0.1,
+      "dataPag": "2026-06-12"
+    },
+    "MXRF11": {
+      "dy": 0.1,
+      "dataPag": "2026-06-15"
+    },
+    "PMLL11": {
+      "dy": 1.0,
+      "dataPag": "2026-06-15"
+    },
+    "PSEC11": {
+      "dy": 0.55,
+      "dataPag": "2026-06-16"
+    },
+    "VISC11": {
+      "dy": 0.84,
+      "dataPag": "2026-06-15"
+    },
+    "CPTI11": {
+      "dy": 1.15,
+      "dataPag": "2026-06-12"
+    },
+    "DEVA11": {
+      "dy": 0.3,
+      "dataPag": "2026-06-15"
+    },
+    "GAME11": {
+      "dy": 0.1,
+      "dataPag": "2026-06-22"
+    },
+    "HABT11": {
+      "dy": 0.95,
+      "dataPag": "2026-06-12"
+    },
+    "HCTR11": {
+      "dy": 0.26,
+      "dataPag": "2026-06-15"
+    },
+    "HFOF11": {
+      "dy": 0.06,
+      "dataPag": "2026-06-15"
+    },
+    "HGRE11": {
+      "dy": 0.85,
+      "dataPag": "2026-06-15"
+    },
+    "HSLG11": {
+      "dy": 0.74,
+      "dataPag": "2026-06-15"
+    },
+    "PCIP11": {
+      "dy": 0.89,
+      "dataPag": "2026-06-16"
+    },
+    "RBHG11": {
+      "dy": 0.8,
+      "dataPag": "2026-06-15"
+    },
+    "TGAR11": {
+      "dy": 0.72,
+      "dataPag": "2026-06-15"
+    },
+    "URPR11": {
+      "dy": 0.29,
+      "dataPag": "2026-06-15"
+    },
+    "VRTM11": {
+      "dy": 0.09,
+      "dataPag": "2026-06-15"
+    },
+    "XPLG11": {
+      "dy": 0.82,
+      "dataPag": "2026-06-15"
+    },
+    "XPML11": {
+      "dy": 0.92,
+      "dataPag": "2026-06-25"
+    },
+    "MFII11": {
+      "dy": 0.91,
+      "dataPag": "2026-06-15"
+    },
+    "UNIP6": {
+      "dy": null,
+      "dataPag": null
+    },
+    "VALE3": {
+      "dy": null,
+      "dataPag": null
+    },
+    "TAEE11": {
+      "dy": null,
+      "dataPag": null
+    },
+    "ISAE4": {
+      "dy": null,
+      "dataPag": null
+    },
+    "BBSE3": {
+      "dy": null,
+      "dataPag": null
+    },
+    "GOAU3": {
+      "dy": 0.08,
+      "dataPag": "2026-06-10"
+    },
+    "BMGB4": {
+      "dy": null,
+      "dataPag": null
+    },
+    "CSNA3": {
+      "dy": null,
+      "dataPag": null
+    },
+    "ITSA4": {
+      "dy": null,
+      "dataPag": null
+    },
+    "BBAS3": {
+      "dy": 0.05968401166,
+      "dataPag": "2026-06-11"
+    },
+    "ITUB3": {
+      "dy": 0.018182,
+      "dataPag": "2026-06-01"
+    }
+  }
+}

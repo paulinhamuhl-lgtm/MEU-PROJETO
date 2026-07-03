@@ -1,0 +1,83 @@
+[
+  {
+    "ticker": "CNES11",
+    "mes": "2026-05",
+    "dataPag": "2026-05-28",
+    "dy": 0.007418,
+    "cotas": 557,
+    "corretora": "RICO",
+    "total": 4.13
+  },
+  {
+    "ticker": "GAME11",
+    "mes": "2026-05",
+    "dataPag": "2026-05-22",
+    "dy": 0.1,
+    "cotas": 1344,
+    "corretora": "CLEAR",
+    "total": 134.4
+  },
+  {
+    "ticker": "GAME11",
+    "mes": "2026-05",
+    "dataPag": "2026-05-22",
+    "dy": 0.1,
+    "cotas": 1179,
+    "corretora": "GENIAL",
+    "total": 117.9
+  },
+  {
+    "ticker": "XPML11",
+    "mes": "2026-05",
+    "dataPag": "2026-05-25",
+    "dy": 0.92,
+    "cotas": 51,
+    "corretora": "GENIAL",
+    "total": 46.92
+  },
+  {
+    "ticker": "XPML11",
+    "mes": "2026-05",
+    "dataPag": "2026-05-25",
+    "dy": 0.92,
+    "cotas": 18,
+    "corretora": "CLEAR",
+    "total": 16.56
+  },
+  {
+    "ticker": "TAEE11",
+    "mes": "2026-05",
+    "dataPag": "2026-05-27",
+    "dy": 0.9089,
+    "cotas": 44,
+    "corretora": "CLEAR",
+    "total": 39.99
+  },
+  {
+    "ticker": "BMGB4",
+    "mes": "2026-05",
+    "dataPag": "2026-05-21",
+    "dy": 0.1,
+    "cotas": 139,
+    "corretora": "CLEAR",
+    "total": 13.9
+  },
+  {
+    "ticker": "GOAU3",
+    "mes": "2026-06",
+    "dataPag": "2026-06-10",
+    "dy": 0.08,
+    "cotas": 97,
+    "corretora": "CLEAR",
+    "total": 7.76
+  },
+  {
+    "ticker": "BBAS3",
+    "mes": "2026-06",
+    "dataPag": "2026-06-11",
+    "dy": 0.059684,
+    "cotas": 19,
+    "corretora": "CLEAR",
+    "total": 1.13
+  }
+]

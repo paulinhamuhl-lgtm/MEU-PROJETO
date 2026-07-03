@@ -1,0 +1,317 @@
+[
+  {
+    "id": "tx_1779925382373",
+    "data": "2026-05-27",
+    "ticker": "KNSC11",
+    "corr": "CLEAR",
+    "total": 4990.44,
+    "qtd": 546,
+    "preco": 9.14,
+    "pmDepois": 8.8059,
+    "qtdDepois": 1796,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": {
+      "t": "KNSC11",
+      "corr": "CLEAR",
+      "q": 1250,
+      "pm": 8.66,
+      "c": 10828
+    },
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779925354852",
+    "data": "2026-05-27",
+    "ticker": "HABT11",
+    "corr": "CLEAR",
+    "total": 9990.56,
+    "qtd": 136,
+    "preco": 73.46,
+    "pmDepois": 75.538,
+    "qtdDepois": 436,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": {
+      "t": "HABT11",
+      "corr": "CLEAR",
+      "q": 300,
+      "pm": 76.48,
+      "c": 22943
+    },
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779925334707",
+    "data": "2026-05-27",
+    "ticker": "PCIP11",
+    "corr": "CLEAR",
+    "total": 5951.22,
+    "qtd": 71,
+    "preco": 83.82,
+    "pmDepois": 84.0724,
+    "qtdDepois": 336,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": {
+      "t": "PCIP11",
+      "corr": "CLEAR",
+      "q": 265,
+      "pm": 84.14,
+      "c": 22298
+    },
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779925306641",
+    "data": "2026-05-27",
+    "ticker": "XPLG11",
+    "corr": "CLEAR",
+    "total": 1943.6,
+    "qtd": 20,
+    "preco": 97.18,
+    "pmDepois": 100.2282,
+    "qtdDepois": 55,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": {
+      "t": "XPLG11",
+      "corr": "CLEAR",
+      "q": 35,
+      "pm": 101.97,
+      "c": 3569
+    },
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779925274712",
+    "data": "2026-05-27",
+    "ticker": "XPML11",
+    "corr": "CLEAR",
+    "total": 1924.74,
+    "qtd": 18,
+    "preco": 106.93,
+    "pmDepois": 106.93,
+    "qtdDepois": 18,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": null,
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779925240483",
+    "data": "2026-05-27",
+    "ticker": "VRTM11",
+    "corr": "CLEAR",
+    "total": 5004.84,
+    "qtd": 699,
+    "preco": 7.16,
+    "pmDepois": 8.1413,
+    "qtdDepois": 3699,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": {
+      "t": "VRTM11",
+      "corr": "CLEAR",
+      "q": 3000,
+      "pm": 8.37,
+      "c": 25110
+    },
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779925208535",
+    "data": "2026-05-27",
+    "ticker": "GAME11",
+    "corr": "CLEAR",
+    "total": 2997.12,
+    "qtd": 336,
+    "preco": 8.92,
+    "pmDepois": 8.68,
+    "qtdDepois": 1344,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": {
+      "t": "GAME11",
+      "corr": "CLEAR",
+      "q": 1008,
+      "pm": 8.6,
+      "c": 8668
+    },
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779925188677",
+    "data": "2026-05-27",
+    "ticker": "CPTI11",
+    "corr": "CLEAR",
+    "total": 8911.23,
+    "qtd": 101,
+    "preco": 88.23,
+    "pmDepois": 87.9131,
+    "qtdDepois": 361,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": {
+      "t": "CPTI11",
+      "corr": "CLEAR",
+      "q": 260,
+      "pm": 87.79,
+      "c": 22825
+    },
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779925164391",
+    "data": "2026-05-27",
+    "ticker": "MFII11",
+    "corr": "CLEAR",
+    "total": 7945.35,
+    "qtd": 147,
+    "preco": 54.05,
+    "pmDepois": 54.05,
+    "qtdDepois": 147,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": null,
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779922638247",
+    "data": "2026-05-27",
+    "ticker": "TGAR11",
+    "corr": "CLEAR",
+    "total": 6304.44,
+    "qtd": 107,
+    "preco": 58.92,
+    "pmDepois": 58.92,
+    "qtdDepois": 107,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": null,
+    "isNovo": false
+  },
+  {
+    "id": "tx_1779922553671",
+    "data": "2026-05-27",
+    "ticker": "MXRF11",
+    "corr": "CLEAR",
+    "total": 29.7,
+    "qtd": 3,
+    "preco": 9.9,
+    "pmDepois": 9.8521,
+    "qtdDepois": 70,
+    "statusDataCom": "next",
+    "dataEx": null,
+    "snapshot": {
+      "t": "MXRF11",
+      "corr": "CLEAR",
+      "q": 67,
+      "pm": 9.85,
+      "c": 660
+    },
+    "isNovo": false
+  },
+  {
+    "id": "mr2ig9mqkvpm",
+    "ticker": "GAME11",
+    "corr": "CLEAR",
+    "qtd": 284,
+    "preco": 8.76,
+    "total": 2487.84,
+    "data": "2026-06-30",
+    "isNovo": false,
+    "snapshot": {
+      "q": 1344,
+      "pm": 8.679404761904761,
+      "c": 11665.119999999999
+    },
+    "statusDataCom": "unknown",
+    "dataCom": null
+  },
+  {
+    "id": "mr2ih61l6oet",
+    "ticker": "MFII11",
+    "corr": "CLEAR",
+    "qtd": 51,
+    "preco": 49.5,
+    "total": 2524.5,
+    "data": "2026-06-30",
+    "isNovo": false,
+    "snapshot": {
+      "q": 147,
+      "pm": 54.05,
+      "c": 7945.35
+    },
+    "statusDataCom": "unknown",
+    "dataCom": null
+  },
+  {
+    "id": "mr2ihyejfimv",
+    "ticker": "HABT11",
+    "corr": "CLEAR",
+    "qtd": 35,
+    "preco": 71.78,
+    "total": 2512.3,
+    "data": "2026-06-30",
+    "isNovo": false,
+    "snapshot": {
+      "q": 436,
+      "pm": 75.5356880733945,
+      "c": 32933.56
+    },
+    "statusDataCom": "unknown",
+    "dataCom": null
+  },
+  {
+    "id": "mr2iirz8668x",
+    "ticker": "VRTM11",
+    "corr": "CLEAR",
+    "qtd": 353,
+    "preco": 7,
+    "total": 2471,
+    "data": "2026-06-30",
+    "isNovo": false,
+    "snapshot": {
+      "q": 3699,
+      "pm": 8.141346309813462,
+      "c": 30114.84
+    },
+    "statusDataCom": "unknown",
+    "dataCom": null
+  },
+  {
+    "id": "mr2ijjdbp969",
+    "ticker": "TGAR11",
+    "corr": "CLEAR",
+    "qtd": 48,
+    "preco": 52.21,
+    "total": 2506.08,
+    "data": "2026-06-30",
+    "isNovo": false,
+    "snapshot": {
+      "q": 107,
+      "pm": 58.92,
+      "c": 6304.44
+    },
+    "statusDataCom": "unknown",
+    "dataCom": null
+  },
+  {
+    "id": "mr2ilhgh84fr",
+    "ticker": "XPLG11",
+    "corr": "CLEAR",
+    "qtd": 27,
+    "preco": 92.49,
+    "total": 2497.23,
+    "data": "2026-06-30",
+    "isNovo": false,
+    "snapshot": {
+      "q": 55,
+      "pm": 100.22909090909091,
+      "c": 5512.6
+    },
+    "statusDataCom": "unknown",
+    "dataCom": null
+  }
+]
